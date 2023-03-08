@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            color: wheat;
+        }
+
+        .container {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card {
+            background-image: url(/CV/ios-13-stock-ipados-red-black-background-amoled-ipad-hd-1080x1920-792\ \(1\).jpg);
+            width: 380px;
+            border: none;
+            border-radius: 15px;
+            padding: 15px;
+            background-color: #5477c2;
+            position: relative;
+            height: 590px;
+        }
+
+        .user {
+            position: relative;
+            margin-top: 50px;
+        }
+
+        .profile img {
+            position: absolute;
+            top: -58px;
+            left: 38%;
+            height: 110px;
+            width: 110px;
+            border: 3px solid #fff;
+            border-radius: 50%;
+        }
+
+        .name {
+            font-size: 18px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-style: italic;
+            text-align: center;
+            margin-top: 110px;
+        }
+        .title{
+            text-align: center;
+            margin-top: -10px;
+            font-size: 18px;
+        }
+        .qoute{
+            font-size: 16px;
+            text-align: center;
+            margin-top: -13px;
+        }
+
+
+        /* Styles for the navigation menu */
+        .nav-bar{
+            align-items: center;
+        }
+  
+
+        #nav a {
+            float: left;
+            color: wheat;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        #nav a:hover {
+            color: black;
+        }
+        .data{
+            margin: 20px;
+        }
+
+        /* Styles for the sections */
+        .section {
+            display: none;
+            padding: 20px;
+            background: transparent;
+            border-radius: 5%;
+            color: wheat;
+        }
+
+        .section.active {
+            display: block;
+        }
+        h1{
+            font-size: 15px;
+            margin-left: -60px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <div class="user text-center">
+                <div class="profile">
+                    <img id="profile-img" src="/CV/png.jpg" class="rounded-circle">
+                </div>
+            </div>
+            <div class="mt-5 text-center">
+                <h4 class="name"> YABUBU DAUDA GAMBO</h4>
+                <h5 class="title">C.E.O Elderly Health Care Foundation</h5>
+                <p class="qoute">
+                    "If you want to win tomorrow Chang the way you are doing things yesterday and start a new thing
+                    today."
+                </p>
+                <div class="nav-bar">
+                    <div id="nav">
+                        <a href="#" data-target="section1">Home</a>
+                        <a href="#" data-target="section2">Profession</a>
+                        <a href="#" data-target="section3">Challenges?</a>
+                    </div>
+                </div>
+                <div class="container-section">
+                <div id="section1" class="section active">
+                    <div class="data">
+                        In some years back, i was so depress facing so many life challenges No support from everyone else
+                            looking so reckless
+                            moving without magnetud or direction. <span> But today am living the life of my terms moving
+                                around the world operating offices
+                                in different parts of Nigeria
+                            </span>
+                    </div> 
+                </div>
+
+                <div id="section2" class="section">
+                    <div>
+                    </div class="data" > 
+                        Computer scientist,
+                        Chemist,
+                        Silver Executive S.E with AIM GLOBAL NIG, <br>
+                        Personal Development Trainer,
+                        Social Entrepreneur, <em> C21FG INT'L Active Partner
+                        </em> 
+                </div>
+
+                <div id="section3" class="section">
+                    <div class="data">
+                        <ul>
+                        <li> Is it been financial stable?</li>
+                        <li> Is it health challenge?</li>
+                        <li> Having your own house or are you living in rented apartment?</li>
+                        <li> Time challenges?</li>
+                        <li> Unable to have a retirement plan?</li>
+                    </ul>
+                    </div>
+                </div>
+                </div>
+            </div>
+            <div class="icon">
+                <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+               <a href="#"><ion-icon name="logo-whatsapp"></ion-icon></a>
+                <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+                <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+            </div>
+            <footer>
+                Copyright &copy; 2022 Social Media Studior
+            </footer>
+        </div>
+    </div>
+
+    <script>
+        const navLinks = document.querySelectorAll('#nav a');
+        const sections = document.querySelectorAll('.section');
+
+        // Add click event listener to each navigation link
+        navLinks.forEach(link => {
+            link.addEventListener('click', function (event) {
+                // Prevent default link behavior
+                event.preventDefault();
+
+                // Remove active class from all sections
+                sections.forEach(section => {
+                    section.classList.remove('active');
+                });
+
+                // Add active class to the target section
+                const target = link.getAttribute('data-target');
+                const targetSection = document.getElementById(target);
+                targetSection.classList.add('active');
+            });
+        });
+    </script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
